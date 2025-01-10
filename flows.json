@@ -1,0 +1,970 @@
+[
+    {
+        "id": "02c9adcd8b91061c",
+        "type": "tab",
+        "label": "パワエレモニター試作",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "1388533c479e1684",
+        "type": "tab",
+        "label": "フロー 1",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "a5f4c7d052f38d01",
+        "type": "ui_tab",
+        "name": "POWER monitor",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "d5c603ade490ed77",
+        "type": "ui_base",
+        "theme": {
+            "name": "theme-dark",
+            "lightTheme": {
+                "default": "#0094CE",
+                "baseColor": "#0094CE",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "darkTheme": {
+                "default": "#097479",
+                "baseColor": "#097479",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "customTheme": {
+                "name": "Untitled Theme 1",
+                "default": "#4B7930",
+                "baseColor": "#4B7930",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+            },
+            "themeState": {
+                "base-color": {
+                    "default": "#097479",
+                    "value": "#097479",
+                    "edited": false
+                },
+                "page-titlebar-backgroundColor": {
+                    "value": "#097479",
+                    "edited": false
+                },
+                "page-backgroundColor": {
+                    "value": "#111111",
+                    "edited": false
+                },
+                "page-sidebar-backgroundColor": {
+                    "value": "#333333",
+                    "edited": false
+                },
+                "group-textColor": {
+                    "value": "#0eb8c0",
+                    "edited": false
+                },
+                "group-borderColor": {
+                    "value": "#555555",
+                    "edited": false
+                },
+                "group-backgroundColor": {
+                    "value": "#333333",
+                    "edited": false
+                },
+                "widget-textColor": {
+                    "value": "#eeeeee",
+                    "edited": false
+                },
+                "widget-backgroundColor": {
+                    "value": "#097479",
+                    "edited": false
+                },
+                "widget-borderColor": {
+                    "value": "#333333",
+                    "edited": false
+                },
+                "base-font": {
+                    "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+                }
+            },
+            "angularTheme": {
+                "primary": "indigo",
+                "accents": "blue",
+                "warn": "red",
+                "background": "grey",
+                "palette": "light"
+            }
+        },
+        "site": {
+            "name": "Node-RED ダッシュボード",
+            "hideToolbar": "false",
+            "allowSwipe": "false",
+            "lockMenu": "false",
+            "allowTempTheme": "true",
+            "dateFormat": "YYYY/MM/DD",
+            "sizes": {
+                "sx": 48,
+                "sy": 48,
+                "gx": 6,
+                "gy": 6,
+                "cx": 6,
+                "cy": 6,
+                "px": 0,
+                "py": 0
+            }
+        }
+    },
+    {
+        "id": "1bdb12e0fae192c6",
+        "type": "ui_group",
+        "name": "V_PROP",
+        "tab": "a5f4c7d052f38d01",
+        "order": 1,
+        "disp": true,
+        "width": 6,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "064a742bfc836604",
+        "type": "ui_group",
+        "name": "HV_BAT",
+        "tab": "a5f4c7d052f38d01",
+        "order": 2,
+        "disp": true,
+        "width": 6,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "a08472156e9f7523",
+        "type": "ui_group",
+        "name": "LV_BATT",
+        "tab": "a5f4c7d052f38d01",
+        "order": 3,
+        "disp": true,
+        "width": 6,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "84d424b115d73dd4",
+        "type": "ui_group",
+        "name": "FLIGHT_MODE",
+        "tab": "a5f4c7d052f38d01",
+        "order": 4,
+        "disp": true,
+        "width": 6,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "1fa07f3bffea98f4",
+        "type": "ui_group",
+        "name": "BODY_STATUS",
+        "tab": "a5f4c7d052f38d01",
+        "order": 5,
+        "disp": true,
+        "width": 6,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "29af4b2d8625ddf0",
+        "type": "ui_group",
+        "name": "BATTERY_MODE",
+        "tab": "a5f4c7d052f38d01",
+        "order": 6,
+        "disp": true,
+        "width": 6,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "e008fa89d519f1a4",
+        "type": "ui_group",
+        "name": "CONTROL MODE",
+        "tab": "a5f4c7d052f38d01",
+        "order": 7,
+        "disp": true,
+        "width": 6,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "34698cf42f148e6c",
+        "type": "ui_group",
+        "name": "INFORMATION",
+        "tab": "a5f4c7d052f38d01",
+        "order": 8,
+        "disp": true,
+        "width": 6,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "3223bfbb84e591f8",
+        "type": "inject",
+        "z": "02c9adcd8b91061c",
+        "name": "debug Current time",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 1030,
+        "y": 60,
+        "wires": [
+            [
+                "57f9c0b2bb4971ea"
+            ]
+        ]
+    },
+    {
+        "id": "57f9c0b2bb4971ea",
+        "type": "debug",
+        "z": "02c9adcd8b91061c",
+        "name": "デバッグ表示",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1280,
+        "y": 60,
+        "wires": []
+    },
+    {
+        "id": "2e5448c81930e9de",
+        "type": "ui_gauge",
+        "z": "02c9adcd8b91061c",
+        "name": "",
+        "group": "1bdb12e0fae192c6",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "gtype": "donut",
+        "title": "V_PROP",
+        "label": "rpm",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "30000",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "24000",
+        "seg2": "28000",
+        "diff": false,
+        "className": "",
+        "x": 1240,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "9a8504c741a5a9a1",
+        "type": "ui_level",
+        "z": "02c9adcd8b91061c",
+        "group": "064a742bfc836604",
+        "order": 2,
+        "width": "1",
+        "height": "6",
+        "name": "HV_BATT_VOL",
+        "label": "V",
+        "colorHi": "#00ff00",
+        "colorWarn": "#e1ff00",
+        "colorNormal": "#ff0000",
+        "colorOff": "#595959",
+        "min": "260",
+        "max": "450",
+        "segWarn": "310",
+        "segHigh": "350",
+        "unit": "",
+        "layout": "sv",
+        "channelA": "",
+        "channelB": "",
+        "decimals": 0,
+        "animations": "soft",
+        "shape": 2,
+        "colorschema": "fixed",
+        "textoptions": "default",
+        "colorText": "#eeeeee",
+        "fontLabel": "",
+        "fontValue": "",
+        "fontSmall": "",
+        "colorFromTheme": true,
+        "textAnimations": false,
+        "hideValue": false,
+        "tickmode": "off",
+        "peakmode": false,
+        "property": "payload",
+        "peaktime": 3000,
+        "x": 1260,
+        "y": 400,
+        "wires": []
+    },
+    {
+        "id": "cf14c786d355556c",
+        "type": "ui_level",
+        "z": "02c9adcd8b91061c",
+        "group": "064a742bfc836604",
+        "order": 2,
+        "width": "1",
+        "height": "6",
+        "name": "HV_BATT_TEMP",
+        "label": "TEMP",
+        "colorHi": "#e60000",
+        "colorWarn": "#ff9900",
+        "colorNormal": "#00b33c",
+        "colorOff": "#595959",
+        "min": 0,
+        "max": "120",
+        "segWarn": "30",
+        "segHigh": "40",
+        "unit": "",
+        "layout": "sv",
+        "channelA": "",
+        "channelB": "",
+        "decimals": 0,
+        "animations": "soft",
+        "shape": 2,
+        "colorschema": "fixed",
+        "textoptions": "default",
+        "colorText": "#eeeeee",
+        "fontLabel": "",
+        "fontValue": "",
+        "fontSmall": "",
+        "colorFromTheme": true,
+        "textAnimations": false,
+        "hideValue": false,
+        "tickmode": "off",
+        "peakmode": false,
+        "property": "payload",
+        "peaktime": 3000,
+        "x": 1270,
+        "y": 460,
+        "wires": []
+    },
+    {
+        "id": "cd305b81b72cbf4c",
+        "type": "ui_level",
+        "z": "02c9adcd8b91061c",
+        "group": "a08472156e9f7523",
+        "order": 2,
+        "width": "1",
+        "height": "6",
+        "name": "LV_BATT_VOL",
+        "label": "V",
+        "colorHi": "#00ff00",
+        "colorWarn": "#eeff00",
+        "colorNormal": "#ff0000",
+        "colorOff": "#595959",
+        "min": "5",
+        "max": "15",
+        "segWarn": "10",
+        "segHigh": "11",
+        "unit": "V",
+        "layout": "sv",
+        "channelA": "",
+        "channelB": "",
+        "decimals": 0,
+        "animations": "soft",
+        "shape": 2,
+        "colorschema": "fixed",
+        "textoptions": "default",
+        "colorText": "#eeeeee",
+        "fontLabel": "",
+        "fontValue": "",
+        "fontSmall": "",
+        "colorFromTheme": true,
+        "textAnimations": false,
+        "hideValue": false,
+        "tickmode": "off",
+        "peakmode": false,
+        "property": "payload",
+        "peaktime": 3000,
+        "x": 1260,
+        "y": 620,
+        "wires": []
+    },
+    {
+        "id": "c2b7d1783c4bd7d3",
+        "type": "ui_level",
+        "z": "02c9adcd8b91061c",
+        "group": "a08472156e9f7523",
+        "order": 2,
+        "width": "1",
+        "height": "6",
+        "name": "LV_BATT_TEMP",
+        "label": "TEMP",
+        "colorHi": "#e60000",
+        "colorWarn": "#ff9900",
+        "colorNormal": "#00b33c",
+        "colorOff": "#595959",
+        "min": 0,
+        "max": "120",
+        "segWarn": "30",
+        "segHigh": "40",
+        "unit": "",
+        "layout": "sv",
+        "channelA": "",
+        "channelB": "",
+        "decimals": 0,
+        "animations": "soft",
+        "shape": 2,
+        "colorschema": "fixed",
+        "textoptions": "default",
+        "colorText": "#eeeeee",
+        "fontLabel": "",
+        "fontValue": "",
+        "fontSmall": "",
+        "colorFromTheme": true,
+        "textAnimations": false,
+        "hideValue": false,
+        "tickmode": "off",
+        "peakmode": false,
+        "property": "payload",
+        "peaktime": 3000,
+        "x": 1270,
+        "y": 680,
+        "wires": []
+    },
+    {
+        "id": "7847dabe96edefb1",
+        "type": "ui_gauge",
+        "z": "02c9adcd8b91061c",
+        "name": "",
+        "group": "064a742bfc836604",
+        "order": 5,
+        "width": "3",
+        "height": "3",
+        "gtype": "donut",
+        "title": "HV_BAT_QTY",
+        "label": "%",
+        "format": "{{value}}",
+        "min": "0",
+        "max": "100",
+        "colors": [
+            "#ff0000",
+            "#e6e600",
+            "#00ff00"
+        ],
+        "seg1": "20",
+        "seg2": "50",
+        "diff": false,
+        "className": "",
+        "x": 1260,
+        "y": 520,
+        "wires": []
+    },
+    {
+        "id": "c61bd9e9cd4d7368",
+        "type": "ui_gauge",
+        "z": "02c9adcd8b91061c",
+        "name": "",
+        "group": "a08472156e9f7523",
+        "order": 5,
+        "width": "3",
+        "height": "3",
+        "gtype": "donut",
+        "title": "LV_BAT_QTY",
+        "label": "%",
+        "format": "{{value}}",
+        "min": "0",
+        "max": "100",
+        "colors": [
+            "#ff0000",
+            "#e6e600",
+            "#00ff00"
+        ],
+        "seg1": "20",
+        "seg2": "50",
+        "diff": false,
+        "className": "",
+        "x": 1260,
+        "y": 740,
+        "wires": []
+    },
+    {
+        "id": "89d2701e3acc9832",
+        "type": "ui_gauge",
+        "z": "02c9adcd8b91061c",
+        "name": "",
+        "group": "1bdb12e0fae192c6",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "gtype": "donut",
+        "title": "V_POWER",
+        "label": "%",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "120",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "60",
+        "seg2": "80",
+        "diff": false,
+        "className": "",
+        "x": 1250,
+        "y": 340,
+        "wires": []
+    },
+    {
+        "id": "b26756542d502bd5",
+        "type": "ui_text",
+        "z": "02c9adcd8b91061c",
+        "group": "84d424b115d73dd4",
+        "order": 0,
+        "width": "6",
+        "height": "1",
+        "name": "",
+        "label": "",
+        "format": "{{msg.payload}}",
+        "layout": "row-center",
+        "className": "",
+        "style": true,
+        "font": "",
+        "fontSize": "26",
+        "color": "#50f907",
+        "x": 1230,
+        "y": 800,
+        "wires": []
+    },
+    {
+        "id": "a38c8c4e74c2e897",
+        "type": "ui_svg_graphics",
+        "z": "02c9adcd8b91061c",
+        "group": "1fa07f3bffea98f4",
+        "order": 0,
+        "width": "0",
+        "height": "0",
+        "svgString": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<svg version=\"1.1\" xmlns=\"http://www.w3.org/2000/svg\" width=\"300\" height=\"350\">\n\n    <rect x=\"12\" y=\"75\" width=\"50\" height=\"50\" rx=\"60\" ry=\"60\" stroke=\"green\" stroke-width=\"2\" fill=\"none\" />\n    <rect x=\"228\" y=\"75\" width=\"50\" height=\"50\" rx=\"60\" ry=\"60\" stroke=\"green\" stroke-width=\"2\" fill=\"none\" />\n    \n    <rect x=\"12\" y=\"215\" width=\"50\" height=\"50\" rx=\"60\" ry=\"60\" stroke=\"green\" stroke-width=\"2\" fill=\"none\" />\n    <rect x=\"228\" y=\"215\" width=\"50\" height=\"50\" rx=\"60\" ry=\"60\" stroke=\"green\" stroke-width=\"2\" fill=\"none\" />\n    \n    <rect x=\"82\" y=\"75\" width=\"50\" height=\"50\" rx=\"60\" ry=\"60\" stroke=\"green\" stroke-width=\"2\" fill=\"none\" />\n    <rect x=\"82\" y=\"215\" width=\"50\" height=\"50\" rx=\"60\" ry=\"60\" stroke=\"green\" stroke-width=\"2\" fill=\"none\" />\n    \n    <rect x=\"162\" y=\"75\" width=\"50\" height=\"50\" rx=\"60\" ry=\"60\" stroke=\"green\" stroke-width=\"2\" fill=\"none\" />\n    <rect x=\"162\" y=\"215\" width=\"50\" height=\"50\" rx=\"60\" ry=\"60\" stroke=\"green\" stroke-width=\"2\" fill=\"none\" />\n    \n    <rect x=\"82\" y=\"20\" width=\"50\" height=\"50\" rx=\"60\" ry=\"60\" stroke=\"green\" stroke-width=\"2\" fill=\"none\" />\n    <rect x=\"162\" y=\"20\" width=\"50\" height=\"50\" rx=\"60\" ry=\"60\" stroke=\"green\" stroke-width=\"2\" fill=\"none\" />\n    \n    <rect x=\"82\" y=\"270\" width=\"50\" height=\"50\" rx=\"60\" ry=\"60\" stroke=\"green\" stroke-width=\"2\" fill=\"none\" />\n    <rect x=\"162\" y=\"270\" width=\"50\" height=\"50\" rx=\"60\" ry=\"60\" stroke=\"green\" stroke-width=\"2\" fill=\"none\" />\n<path\n    d=\"M0 0 C2.97 0 5.94 0 9 0 C9 33.99 9 67.98 9 103 C15.27 103 21.54 103 28 103 C28 96.07 28 89.14 28 82 C28.33 82 28.66 82 29 82 C29 88.93 29 95.86 29 103 C40.22 103 51.44 103 63 103 C63 96.07 63 89.14 63 82 C63.33 82 63.66 82 64 82 C64 88.93 64 95.86 64 103 C68.95 103 73.9 103 79 103 C79 69.01 79 35.02 79 0 C81.97 0 84.94 0 88 0 C88 33.99 88 67.98 88 103 C107.47 103 126.94 103 147 103 C147 89.8 147 76.6 147 63 C150.3 63 153.6 63 157 63 C157 109.86 157 156.72 157 205 C153.7 205 150.4 205 147 205 C147 185.2 147 165.4 147 145 C127.53 145 108.06 145 88 145 C88 187.9 88 230.8 88 275 C58.96 275 29.92 275 0 275 C0 232.1 0 189.2 0 145 C-19.8 145 -39.6 145 -60 145 C-60 164.8 -60 184.6 -60 205 C-62.97 205 -65.94 205 -69 205 C-69 158.14 -69 111.28 -69 63 C-66.03 63 -63.06 63 -60 63 C-60 76.2 -60 89.4 -60 103 C-40.2 103 -20.4 103 0 103 C0 69.01 0 35.02 0 0 Z M1 1 C1 34.66 1 68.32 1 103 C3.31 103 5.62 103 8 103 C8 69.34 8 35.68 8 1 C5.69 1 3.38 1 1 1 Z M80 1 C80 34.66 80 68.32 80 103 C82.31 103 84.62 103 87 103 C87 69.34 87 35.68 87 1 C84.69 1 82.38 1 80 1 Z M-68 64 C-68 76.87 -68 89.74 -68 103 C-65.69 103 -63.38 103 -61 103 C-61 90.13 -61 77.26 -61 64 C-63.31 64 -65.62 64 -68 64 Z M149 64 C149 76.87 149 89.74 149 103 C150.98 103 152.96 103 155 103 C155 90.13 155 77.26 155 64 C153.02 64 151.04 64 149 64 Z M-68 104 C-68 117.2 -68 130.4 -68 144 C-65.69 144 -63.38 144 -61 144 C-61 130.8 -61 117.6 -61 104 C-63.31 104 -65.62 104 -68 104 Z M-60 104 C-60 117.2 -60 130.4 -60 144 C-40.2 144 -20.4 144 0 144 C0 130.8 0 117.6 0 104 C-19.8 104 -39.6 104 -60 104 Z M1 104 C1 117.2 1 130.4 1 144 C3.31 144 5.62 144 8 144 C8 130.8 8 117.6 8 104 C5.69 104 3.38 104 1 104 Z M9 104 C9 117.2 9 130.4 9 144 C32.1 144 55.2 144 79 144 C79 130.8 79 117.6 79 104 C55.9 104 32.8 104 9 104 Z M80 104 C80 117.2 80 130.4 80 144 C82.31 144 84.62 144 87 144 C87 130.8 87 117.6 87 104 C84.69 104 82.38 104 80 104 Z M88 104 C88 117.2 88 130.4 88 144 C107.47 144 126.94 144 147 144 C147 130.8 147 117.6 147 104 C127.53 104 108.06 104 88 104 Z M149 104 C149 117.2 149 130.4 149 144 C150.98 144 152.96 144 155 144 C155 130.8 155 117.6 155 104 C153.02 104 151.04 104 149 104 Z M-68 145 C-68 164.47 -68 183.94 -68 204 C-65.69 204 -63.38 204 -61 204 C-61 184.53 -61 165.06 -61 145 C-63.31 145 -65.62 145 -68 145 Z M1 145 C1 180.64 1 216.28 1 253 C3.31 253 5.62 253 8 253 C8 217.36 8 181.72 8 145 C5.69 145 3.38 145 1 145 Z M9 145 C9 180.64 9 216.28 9 253 C32.1 253 55.2 253 79 253 C79 217.36 79 181.72 79 145 C55.9 145 32.8 145 9 145 Z M80 145 C80 180.64 80 216.28 80 253 C82.31 253 84.62 253 87 253 C87 217.36 87 181.72 87 145 C84.69 145 82.38 145 80 145 Z M149 145 C149 164.47 149 183.94 149 204 C150.98 204 152.96 204 155 204 C155 184.53 155 165.06 155 145 C153.02 145 151.04 145 149 145 Z M1 254 C1 260.6 1 267.2 1 274 C3.31 274 5.62 274 8 274 C8 267.4 8 260.8 8 254 C5.69 254 3.38 254 1 254 Z M9 254 C9 260.6 9 267.2 9 274 C32.1 274 55.2 274 79 274 C79 267.4 79 260.8 79 254 C55.9 254 32.8 254 9 254 Z M80 254 C80 260.6 80 267.2 80 274 C82.31 274 84.62 274 87 274 C87 267.4 87 260.8 87 254 C84.69 254 82.38 254 80 254 Z \"\n    fill=\"#00BE00\" transform=\"translate(102,40)\" />\n<path\n    d=\"M0 0 C2.97 0 5.94 0 9 0 C9 33.99 9 67.98 9 103 C15.27 103 21.54 103 28 103 C28 103.33 28 103.66 28 104 C21.73 104 15.46 104 9 104 C9 117.2 9 130.4 9 144 C17.25 144 25.5 144 34 144 C34 144.33 34 144.66 34 145 C25.75 145 17.5 145 9 145 C9 180.64 9 216.28 9 253 C31.44 253 53.88 253 77 253 C77 253.33 77 253.66 77 254 C54.56 254 32.12 254 9 254 C9 260.6 9 267.2 9 274 C8.67 274.33 8.34 274.66 8 275 C5.36 275 2.72 275 0 275 C0 232.1 0 189.2 0 145 C-19.8 145 -39.6 145 -60 145 C-60 164.8 -60 184.6 -60 205 C-62.97 205 -65.94 205 -69 205 C-69 158.14 -69 111.28 -69 63 C-66.03 63 -63.06 63 -60 63 C-60 76.2 -60 89.4 -60 103 C-40.2 103 -20.4 103 0 103 C0 69.01 0 35.02 0 0 Z M1 1 C1 34.66 1 68.32 1 103 C3.31 103 5.62 103 8 103 C8 69.34 8 35.68 8 1 C5.69 1 3.38 1 1 1 Z M-68 64 C-68 76.87 -68 89.74 -68 103 C-65.69 103 -63.38 103 -61 103 C-61 90.13 -61 77.26 -61 64 C-63.31 64 -65.62 64 -68 64 Z M-68 104 C-68 117.2 -68 130.4 -68 144 C-65.69 144 -63.38 144 -61 144 C-61 130.8 -61 117.6 -61 104 C-63.31 104 -65.62 104 -68 104 Z M-60 104 C-60 117.2 -60 130.4 -60 144 C-40.2 144 -20.4 144 0 144 C0 130.8 0 117.6 0 104 C-19.8 104 -39.6 104 -60 104 Z M1 104 C1 117.2 1 130.4 1 144 C3.31 144 5.62 144 8 144 C8 130.8 8 117.6 8 104 C5.69 104 3.38 104 1 104 Z M-68 145 C-68 164.47 -68 183.94 -68 204 C-65.69 204 -63.38 204 -61 204 C-61 184.53 -61 165.06 -61 145 C-63.31 145 -65.62 145 -68 145 Z M1 145 C1 180.64 1 216.28 1 253 C3.31 253 5.62 253 8 253 C8 217.36 8 181.72 8 145 C5.69 145 3.38 145 1 145 Z M1 254 C1 260.6 1 267.2 1 274 C3.31 274 5.62 274 8 274 C8 267.4 8 260.8 8 254 C5.69 254 3.38 254 1 254 Z M28 82 C28.33 82 28.66 82 29 82 C29 88.93 29 95.86 29 103 C28.67 103 28.34 103 28 103 C28 96.07 28 89.14 28 82 Z \"\n    fill=\"#00BE00\" transform=\"translate(102,40)\" />\n<path\n    d=\"M0 0 C3.3 0 6.6 0 10 0 C10 46.86 10 93.72 10 142 C6.7 142 3.4 142 0 142 C0 122.2 0 102.4 0 82 C-0.66 81.67 -1.32 81.34 -2 81 C-1.34 81 -0.68 81 0 81 C0 67.8 0 54.6 0 41 C-0.66 40.67 -1.32 40.34 -2 40 C-1.34 40 -0.68 40 0 40 C0 26.8 0 13.6 0 0 Z M2 1 C2 13.87 2 26.74 2 40 C3.98 40 5.96 40 8 40 C8 27.13 8 14.26 8 1 C6.02 1 4.04 1 2 1 Z M2 41 C2 54.2 2 67.4 2 81 C3.98 81 5.96 81 8 81 C8 67.8 8 54.6 8 41 C6.02 41 4.04 41 2 41 Z M2 82 C2 101.47 2 120.94 2 141 C3.98 141 5.96 141 8 141 C8 121.53 8 102.06 8 82 C6.02 82 4.04 82 2 82 Z \"\n    fill=\"#006400\" transform=\"translate(249,103)\" />\n<path d=\"M0 0 C5.94 0 11.88 0 18 0 C18 0.33 18 0.66 18 1 C12.06 1 6.12 1 0 1 C0 0.67 0 0.34 0 0 Z \" fill=\"#00BE00\"\n    transform=\"translate(139,113)\" />\n<path d=\"M0 0 C4.29 0 8.58 0 13 0 C13 0.33 13 0.66 13 1 C8.71 1 4.42 1 0 1 C0 0.67 0 0.34 0 0 Z \" fill=\"#00BE00\"\n    transform=\"translate(141,195)\" />\n\n</svg>\n",
+        "clickableShapes": [],
+        "javascriptHandlers": [],
+        "smilAnimations": [],
+        "bindings": [],
+        "showCoordinates": false,
+        "autoFormatAfterEdit": false,
+        "showBrowserErrors": false,
+        "showBrowserEvents": false,
+        "enableJsDebugging": false,
+        "sendMsgWhenLoaded": false,
+        "noClickWhenDblClick": false,
+        "outputField": "payload",
+        "editorUrl": "//drawsvg.org/drawsvg.html",
+        "directory": "",
+        "panning": "disabled",
+        "zooming": "disabled",
+        "panOnlyWhenZoomed": false,
+        "doubleClickZoomEnabled": false,
+        "mouseWheelZoomEnabled": false,
+        "dblClickZoomPercentage": 150,
+        "cssString": "div.ui-svg svg{\n    color: var(--nr-dashboard-widgetColor);\n    fill: currentColor !important;\n}\ndiv.ui-svg path {\n    fill: inherit;\n}",
+        "name": "",
+        "x": 1260,
+        "y": 1020,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "5e7672046d81fd75",
+        "type": "ui_text",
+        "z": "02c9adcd8b91061c",
+        "group": "29af4b2d8625ddf0",
+        "order": 0,
+        "width": "6",
+        "height": "1",
+        "name": "",
+        "label": "",
+        "format": "{{msg.payload}}",
+        "layout": "row-center",
+        "className": "",
+        "style": true,
+        "font": "",
+        "fontSize": "26",
+        "color": "#06f5f9",
+        "x": 1230,
+        "y": 840,
+        "wires": []
+    },
+    {
+        "id": "3b1b3d6083fb4d32",
+        "type": "ui_text",
+        "z": "02c9adcd8b91061c",
+        "group": "e008fa89d519f1a4",
+        "order": 0,
+        "width": "6",
+        "height": "1",
+        "name": "",
+        "label": "",
+        "format": "{{msg.payload}}",
+        "layout": "row-center",
+        "className": "",
+        "style": true,
+        "font": "",
+        "fontSize": "26",
+        "color": "#ffff00",
+        "x": 1230,
+        "y": 880,
+        "wires": []
+    },
+    {
+        "id": "94ee8d0cb8a0a113",
+        "type": "ui_text",
+        "z": "02c9adcd8b91061c",
+        "group": "34698cf42f148e6c",
+        "order": 0,
+        "width": "6",
+        "height": "1",
+        "name": "",
+        "label": "",
+        "format": "{{msg.payload}}",
+        "layout": "row-center",
+        "className": "",
+        "style": true,
+        "font": "",
+        "fontSize": "26",
+        "color": "#ffff00",
+        "x": 1230,
+        "y": 960,
+        "wires": []
+    },
+    {
+        "id": "1e029812a8cfcd5b",
+        "type": "http in",
+        "z": "02c9adcd8b91061c",
+        "name": "http /json-data",
+        "url": "/json-data",
+        "method": "post",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 130,
+        "y": 80,
+        "wires": [
+            [
+                "95141a85d8d4ee59"
+            ]
+        ]
+    },
+    {
+        "id": "95141a85d8d4ee59",
+        "type": "json",
+        "z": "02c9adcd8b91061c",
+        "name": "",
+        "property": "payload",
+        "action": "obj",
+        "pretty": false,
+        "x": 330,
+        "y": 80,
+        "wires": [
+            [
+                "721dac5e6cf639de",
+                "730e75c3a4b93227",
+                "cc9a9a497d581e6c"
+            ]
+        ]
+    },
+    {
+        "id": "721dac5e6cf639de",
+        "type": "debug",
+        "z": "02c9adcd8b91061c",
+        "name": "JSONペイロード debug表示",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 600,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "730e75c3a4b93227",
+        "type": "http response",
+        "z": "02c9adcd8b91061c",
+        "name": "送信側へ返信 (200)",
+        "statusCode": "200",
+        "headers": {},
+        "x": 570,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "aaaa715d040d4ea0",
+        "type": "function",
+        "z": "02c9adcd8b91061c",
+        "name": "body_status_string",
+        "func": "\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 830,
+        "y": 1020,
+        "wires": [
+            [
+                "a38c8c4e74c2e897"
+            ]
+        ]
+    },
+    {
+        "id": "3a151415dd8f9939",
+        "type": "catch",
+        "z": "02c9adcd8b91061c",
+        "name": "catch error",
+        "scope": null,
+        "uncaught": false,
+        "x": 1000,
+        "y": 120,
+        "wires": [
+            [
+                "57f9c0b2bb4971ea"
+            ]
+        ]
+    },
+    {
+        "id": "cc26e069741fd901",
+        "type": "comment",
+        "z": "02c9adcd8b91061c",
+        "name": "https POST受信",
+        "info": "",
+        "x": 100,
+        "y": 40,
+        "wires": []
+    },
+    {
+        "id": "a87aef4e582091e5",
+        "type": "comment",
+        "z": "02c9adcd8b91061c",
+        "name": "受信データ分岐",
+        "info": "",
+        "x": 560,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "cc9a9a497d581e6c",
+        "type": "function",
+        "z": "02c9adcd8b91061c",
+        "name": "function 1",
+        "func": "\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 540,
+        "y": 340,
+        "wires": [
+            [
+                "09c397bad95287ab",
+                "3dbdf6f8e1e1d85e",
+                "44d3ae3c940924d9",
+                "a49ca818e0a19c90",
+                "73d6c9ca758f8e27",
+                "56f0d66826ad1a0e"
+            ]
+        ]
+    },
+    {
+        "id": "09c397bad95287ab",
+        "type": "change",
+        "z": "02c9adcd8b91061c",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.parameter1",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 980,
+        "y": 340,
+        "wires": [
+            [
+                "89d2701e3acc9832",
+                "7847dabe96edefb1",
+                "c61bd9e9cd4d7368",
+                "cf14c786d355556c",
+                "c2b7d1783c4bd7d3"
+            ]
+        ]
+    },
+    {
+        "id": "3dbdf6f8e1e1d85e",
+        "type": "function",
+        "z": "02c9adcd8b91061c",
+        "name": "function 2",
+        "func": "msg.payload.parameter1 = msg.payload.parameter1 * 300\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 780,
+        "y": 280,
+        "wires": [
+            [
+                "5f184696b4ba6d7f"
+            ]
+        ]
+    },
+    {
+        "id": "5f184696b4ba6d7f",
+        "type": "change",
+        "z": "02c9adcd8b91061c",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.parameter1",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 980,
+        "y": 280,
+        "wires": [
+            [
+                "2e5448c81930e9de"
+            ]
+        ]
+    },
+    {
+        "id": "44d3ae3c940924d9",
+        "type": "function",
+        "z": "02c9adcd8b91061c",
+        "name": "function 3",
+        "func": "msg.payload = \"POSITION MODE\"\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1000,
+        "y": 800,
+        "wires": [
+            [
+                "b26756542d502bd5"
+            ]
+        ]
+    },
+    {
+        "id": "a49ca818e0a19c90",
+        "type": "function",
+        "z": "02c9adcd8b91061c",
+        "name": "function 4",
+        "func": "msg.payload = \"FLIGHT MODE\"\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1000,
+        "y": 840,
+        "wires": [
+            [
+                "5e7672046d81fd75"
+            ]
+        ]
+    },
+    {
+        "id": "73d6c9ca758f8e27",
+        "type": "function",
+        "z": "02c9adcd8b91061c",
+        "name": "function 5",
+        "func": "msg.payload = \"V-MODE\"\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1000,
+        "y": 880,
+        "wires": [
+            [
+                "3b1b3d6083fb4d32"
+            ]
+        ]
+    },
+    {
+        "id": "56f0d66826ad1a0e",
+        "type": "function",
+        "z": "02c9adcd8b91061c",
+        "name": "function 6",
+        "func": "if(msg.payload.parameter1 < 30){\n    msg.payload = \"LOW BATT\"\n}\nelse{\n    msg.payload = \"\"\n}\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1000,
+        "y": 960,
+        "wires": [
+            [
+                "94ee8d0cb8a0a113"
+            ]
+        ]
+    },
+    {
+        "id": "d66689b44c63f36c",
+        "type": "comment",
+        "z": "02c9adcd8b91061c",
+        "name": "HTTPステータスコード \"200\" (OK)",
+        "info": "",
+        "x": 640,
+        "y": 180,
+        "wires": []
+    }
+]
